@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Roboto;
+  src: url(/src/assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+  font-family: Roboto, sans-serif;
+  
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  --text-primary: #e8e9f0;
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #282828;
+  --accent: #1E40AF;
+  --accent-secondary: #2563EB;
+  --grey: #3f3f3f;
+  --grey-secondary: #5a5a5a;
+  --grey-tertiary: #8f8e8e;
+  --light-grey: #a9adb4;
+  --red: #dc2626; 
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+}
+
+h1, h2, p {
+  margin: 15px auto;
+}
+
+a, a:hover {
+  color: var(--accent-secondary);
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.1rem;
+  border: none;
+  background-color: var(--accent);
+  color: var(--text-primary);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--accent-secondary);
+  cursor: pointer;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginFormItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input {
+  border: 1px solid var(--text-secondary);
+  border-radius: 5px;
+  font-family: Roboto, sans-serif;
+  color: var(--text-primary);
+  padding: 2px;
+  background-color: var(--bg-secondary);
+}
+
+.errorMessages {
+  color: var(--accent-secondary);
+}

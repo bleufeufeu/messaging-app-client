@@ -1,0 +1,89 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+.headerContainer {
+    font-size: 1.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.icon {
+    clip-path: circle();
+    padding: 0.4rem;
+    background-color: var(--accent);
+}
+
+.icon:hover {
+    background-color: var(--accent-secondary);
+    cursor: pointer;
+}
+
+.chatsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.chatPanel {
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.chatPanel:hover {
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+}
+
+.chatname {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.chatLastupdated {
+    font-size: 1rem;
+    color: var(--light-grey);
+}
+
+.createForm {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow: hidden;
+    height: 100%;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.createForm > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.createForm label {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.createForm label:hover {
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+}
+
+.createButton {
+    width: 100%;
+}
