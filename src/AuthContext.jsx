@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const storedToken = localStorage.getItem("token");
         if (storedToken) {
-            fetch("http://localhost:3000/users/me", {
+            fetch("https://messaging-app-kzuu.onrender.com/users/me", {
                 headers: { "Authorization": `Bearer ${storedToken}` }
             })
             .then(response => {

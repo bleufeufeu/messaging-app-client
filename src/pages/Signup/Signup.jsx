@@ -20,7 +20,7 @@ export default function Signup() {
         setFormState({...formState, [name]: value})
     }
 
-    const signupUrl = "http://localhost:3000/signup/"
+    const signupUrl = "https://messaging-app-kzuu.onrender.com/signup/"
 
     const onSubmit = async (event) => {
         event.preventDefault();

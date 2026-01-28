@@ -32,7 +32,7 @@ export default function Sidebar({ chatsList, usersList, setCurrentChat, onNewCha
             const storedToken = localStorage.getItem("token");
 
             if (storedToken) {
-                const response = await fetch(`http://localhost:3000/chat/new`, {
+                const response = await fetch(`https://messaging-app-kzuu.onrender.com/chat/new`, {
                     method: "post",
                     headers: {
                         'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export default function Sidebar({ chatsList, usersList, setCurrentChat, onNewCha
                 }
 
 
-                const refetchChatList = await fetch(`http://localhost:3000/users/chats`, {
+                const refetchChatList = await fetch(`https://messaging-app-kzuu.onrender.com/users/chats`, {
                      method: "get",
                      headers: {
                          'Content-Type': 'application/json',

@@ -27,7 +27,7 @@ export default function Login() {
         setFormState({...formState, [name]: value})
     }
 
-    const loginUrl = "http://localhost:3000/login"
+    const loginUrl = "https://messaging-app-kzuu.onrender.com/login"
 
     const onSubmit = async (event) => {
         event.preventDefault();

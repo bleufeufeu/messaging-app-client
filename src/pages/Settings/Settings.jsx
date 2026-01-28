@@ -24,7 +24,7 @@ export default function Settings() {
     }
 
 
-    const updateUrl = "http://localhost:3000/users/newpassword"
+    const updateUrl = "https://messaging-app-kzuu.onrender.com/users/newpassword"
 
     const onSubmit = async (event) => {
         event.preventDefault();

@@ -23,9 +23,9 @@ export default function Home() {
     const dropdownRef = useRef(null);
     const [dropdownVisible, setDropdownVisible] = useState(false);
 
-    const usersUrl = "http://localhost:3000/users/all"
-    const chatsUrl = "http://localhost:3000/users/chats"
-    const chatDetailsUrl = `http://localhost:3000/chat/${currentChat}/messages`
+    const usersUrl = "https://messaging-app-kzuu.onrender.com/users/all"
+    const chatsUrl = "https://messaging-app-kzuu.onrender.com/users/chats"
+    const chatDetailsUrl = `https://messaging-app-kzuu.onrender.com/chat/${currentChat}/messages`
 
     const handleNewChatUpdate = (updatedChatsList) => {
         setChatsList(updatedChatsList);
@@ -155,7 +155,9 @@ export default function Home() {
     
     return (
         <>
-            {loggedIn ? (
+            {authLoading ? (
+                <div>Loading...</div>
+            ) : loggedIn ? (
                 <div className={styles.homeContainer}>
                         <div className={styles.logoContainer} style={{ gridArea: "logo" }}>
                             <div className={styles.logo}><PiPlanetFill /> OdinChat</div>

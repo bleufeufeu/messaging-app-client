@@ -25,7 +25,7 @@ export default function Chatroom({ chatDetails, chatId, onChatUpdate }) {
             const storedToken = localStorage.getItem("token");
 
             if (storedToken) {
-                const response = await fetch(`http://localhost:3000/chat/${chatId}/messages`, {
+                const response = await fetch(`https://messaging-app-kzuu.onrender.com/chat/${chatId}/messages`, {
                     method: "post",
                     headers: {
                         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ export default function Chatroom({ chatDetails, chatId, onChatUpdate }) {
                 setLoading(false);
                 const data = await response.json();
 
-                const refetchChat = await fetch(`http://localhost:3000/chat/${chatId}/messages`, {
+                const refetchChat = await fetch(`https://messaging-app-kzuu.onrender.com/chat/${chatId}/messages`, {
                     method: "get",
                     headers: {
                         'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ export default function Chatroom({ chatDetails, chatId, onChatUpdate }) {
                         <p></p>
                     )}
                         <form className={styles.inputContainer} onSubmit={sendMessage}>
-                            <input className={styles.input} name="message" id="message" type="text" value={formState.message} onChange={onChange} placeholder="Start typing"/>
+                            <input className={styles.input} name="message" id="message" type="text" value={formState.message} onChange={onChange} autoComplete="off" placeholder="Start typing"/>
                             <button className={styles.button} disabled={loading} type="submit"><PiPaperPlaneTiltBold /></button>
                         </form>
                 </div>
